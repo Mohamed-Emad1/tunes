@@ -6,14 +6,14 @@ class Item extends StatelessWidget {
   final ItemInfo item;
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        item.playSound();
-      },
-      child: Container(
-        height: 120,
-        width: double.infinity,
-        color: item.color,
+    return Expanded(
+      child: GestureDetector(
+        onTap: () {
+          item.playSound();
+        },
+        child: Container(
+          color: item.color,
+        ),
       ),
     );
   }
